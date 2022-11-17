@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+}
+
+.container {
+  margin: auto;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: $lightgrey-color;
+  border-radius: 0.1em;
+  margin-block: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $grey-color;
+  border-radius: 100vw;
+
+  &:hover {
+    background: $darkgrey-color;
+  }
+}
+
+@supports (scrollbar-color: grey lightgrey) {
+  * {
+    scrollbar-color: $grey-color $lightgrey-color;
+    scrollbar-width: thin;
+    scroll-margin-block: 1em;
+  }
+}
