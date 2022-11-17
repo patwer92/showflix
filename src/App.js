@@ -1,13 +1,16 @@
-// import "./sass/style.scss";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { Router, Route } from "react-router-dom";
+
+import Heading from "./components/Heading";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Heading />
       <div className="container">
+        <Router></Router>
         <p>Hello world</p>
       </div>
-    </div>
+    </>
   );
 }
 
