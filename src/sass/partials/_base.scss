@@ -6,10 +6,17 @@
 
 body {
   font-family: $primary-font;
+  min-height: 110vh;
+  // background: darkblue;
 }
 
 .container {
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
 }
 
 /* SCROLLBAR */

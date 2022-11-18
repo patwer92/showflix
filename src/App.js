@@ -1,15 +1,20 @@
-import { Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Heading from "./components/Heading";
+import Navigation from "./components/Navigation";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Details from "./pages/Details";
 
 function App() {
   return (
     <>
-      <Heading />
-      <div className="container">
-        <Router></Router>
-        <p>Hello world</p>
-      </div>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/details/:id" element={<Details />} />
+        </Route>
+      </Routes>
     </>
   );
 }
