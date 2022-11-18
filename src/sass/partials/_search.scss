@@ -31,4 +31,27 @@
       }
     }
   }
+
+  /* SEARCH ERROR HANDLING */
+  .error {
+    margin: 0.5rem 0.5rem 0 0;
+    display: flex;
+    align-items: center;
+    font-size: $sm-font;
+
+    .error-icon {
+      margin-right: 0.5rem;
+      width: 30px;
+    }
+  }
+
+  .error-warning {
+    color: #ffee00;
+  }
+  .error-danger {
+    color: #ff0000;
+  }
+  .error-info {
+    color: #fff;
+  }
 }

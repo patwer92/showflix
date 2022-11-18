@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import FormError from "./FormError";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 const Search = () => {
@@ -16,7 +17,7 @@ const Search = () => {
       <form className="search-form">
         <input
           type="text"
-          placeholder="Search TV Show ..."
+          placeholder="Search TV Shows"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         ></input>
@@ -24,6 +25,7 @@ const Search = () => {
           <MagnifyingGlassIcon className="search-icon" />
         </button>
       </form>
+      <FormError message="Please enter a TV show" type="danger" />
     </div>
   );
 };
