@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import ShowsContext from "../contexts/shows/showsContext";
 
 import FormError from "./FormError";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const { searchShows } = useContext(ShowsContext);
 
   const onSearchHandler = (e) => {
     e.preventDefault();
 
-    console.log("searching for term: " + searchTerm);
+    searchShows(searchTerm);
   };
 
   return (
