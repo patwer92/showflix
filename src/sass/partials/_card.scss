@@ -1,0 +1,30 @@
+.card-container {
+  display: inline-block;
+  margin: 1rem auto;
+  width: 210px;
+  background: var(--white-color);
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+    0 3px 1px 0 rgba(20, 23, 28, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+  transition: $secondary-transition;
+}
+
+.listitem:hover {
+  transform: scale(1.03);
+}
+
+.card-info {
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.card-info-name {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.card-info-rating {
+  color: var(--primary-color);
+  padding: 5px;
+}
