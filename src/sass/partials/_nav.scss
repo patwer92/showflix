@@ -1,6 +1,6 @@
 .navbar {
   height: 10vh;
-  background: $black-color;
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -11,26 +11,38 @@
     text-decoration: none;
 
     .logo {
-      width: 4vmax;
-      opacity: 0.7;
+      width: 4rem;
+      opacity: 0.8;
+
+      @media (max-width: $mid-breakpoint) {
+        width: 3rem;
+      }
     }
 
     .nav-brand {
-      padding: 0.7rem 1rem 0;
+      padding: 0 0.5rem;
       color: $primary-color;
       font-family: $secondary-font;
-      font-size: 3vmax;
-      letter-spacing: 0.1rem;
+      font-size: 45px;
+      letter-spacing: 2px;
+
+      @media (max-width: $mid-breakpoint) {
+        font-size: 30px;
+      }
     }
   }
   .nav-btn {
-    width: 2.7vmax;
-    color: $white-color;
-    transition: 200ms ease;
+    width: 2.5rem;
+    color: $grey-color;
+    transition: $primary-transition;
 
     &:hover {
+      color: $white-color;
       cursor: pointer;
-      color: $grey-color;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      width: 2rem;
     }
   }
 }
@@ -45,9 +57,12 @@
 
     .nav-link {
       padding: 1rem 0;
+      font-size: $mid-font;
+      color: $grey-color;
+      transition: $primary-transition;
 
       &:hover {
-        color: $grey-color;
+        color: $white-color;
       }
     }
   }

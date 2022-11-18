@@ -1,10 +1,16 @@
+import Container from "react-bootstrap/Container";
+
 import Heading from "../components/Heading";
 
 const About = () => {
   return (
-    <div className="about-page">
-      <Heading text="This is the About page." />
-    </div>
+    <>
+      <Container>
+        <div className="about-page">
+          <Heading text="This is the About page." />
+        </div>
+      </Container>
+    </>
   );
 };
 

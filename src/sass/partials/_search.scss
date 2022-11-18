@@ -1,0 +1,34 @@
+.search {
+  margin: 1rem 0;
+  .search-form {
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 0 15px;
+
+    input {
+      background: transparent;
+      flex: 1;
+      border: 0;
+      outline: none;
+      padding: 14px 10px;
+      font-size: 20px;
+      color: $grey-color;
+    }
+
+    button {
+      .search-icon {
+        width: 30px;
+        color: $grey-color;
+        transition: $primary-transition;
+
+        &:hover {
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

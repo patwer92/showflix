@@ -1,5 +1,4 @@
 // COLORS
-
 $primary-color: #e50914;
 $secondary-color: #56df9a;
 
@@ -11,6 +10,20 @@ $white-color: #fcfcfc;
 $black-color: #212529;
 
 // FONTS
-
 $primary-font: "Noto Sans Hebrew", sans-serif;
 $secondary-font: "Bangers", cursive;
+
+// FONT-SIZE
+$lg-font: 24px;
+$mid-font: 20px;
+$sm-font: 16px;
+
+// BREAKPOINTS
+$xl-breakpoint: 1600px;
+$lg-breakpoint: 992px;
+$mid-breakpoint: 768px;
+$sm-breakpoint: 576px;
+
+// TRANSITIONS
+$primary-transition: 300ms ease;
+$secondary-transition: 200ms;
