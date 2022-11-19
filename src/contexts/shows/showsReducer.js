@@ -18,6 +18,17 @@ const showsReducer = (state, action) => {
         shows: action.payload,
         loading: false,
       };
+    case SET_DETAILS:
+      return {
+        ...state,
+        showDetails: action.payload,
+        loading: false,
+      };
+    case CLEAR_DETAILS:
+      return {
+        ...state,
+        showDetails: {},
+      };
     default:
       return state;
   }

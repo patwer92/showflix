@@ -7,7 +7,8 @@
 body {
   font-family: $primary-font;
   min-height: 110vh;
-  // background: $black-color;
+  background: $black-color;
+  color: $white-color;
 }
 
 .container {
@@ -19,9 +20,9 @@ a {
   list-style: none;
 }
 
-h1 {
-  // color: $white-color !important;
-}
+// h1 {
+//    color: $white-color !important;
+// }
 
 /* SCROLLBAR */
 

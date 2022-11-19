@@ -15,11 +15,11 @@ const Home = () => {
       <Container>
         <div className="home-page">
           <Search />
-          <Heading text="This is the Home page." />
+
           {loading ? (
             <h2>Loading...</h2>
           ) : (
-            <div>
+            <div class="home-container">
               {shows.map((item) => (
                 <CardItem
                   key={item.show.id}
@@ -27,7 +27,7 @@ const Home = () => {
                   image={
                     item.show.image
                       ? item.show.image.medium
-                      : "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+                      : "https://storiavoce.com/wp-content/plugins/lightbox/images/No-image-found.jpg"
                   }
                   name={item.show.name}
                   rating={
@@ -39,6 +39,7 @@ const Home = () => {
               ))}
             </div>
           )}
+          <Heading text="This is the Home page." />
         </div>
       </Container>
     </>

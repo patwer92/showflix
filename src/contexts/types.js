@@ -5,5 +5,5 @@ export const SET_DETAILS = "SET_DETAILS";
 export const CLEAR_DETAILS = "CLEAR_DETAILS";
 
 // Errors
-export const SET_ERROR = "SET_ERROR";
-export const REMOVE_ERROR = "REMOVE_ERROR";
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";

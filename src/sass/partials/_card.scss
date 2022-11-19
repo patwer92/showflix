@@ -1,4 +1,4 @@
-.card-container {
+.card {
   display: inline-block;
   margin: 1rem auto;
   width: 210px;
@@ -8,23 +8,31 @@
   cursor: pointer;
   text-decoration: none;
   transition: $secondary-transition;
-}
 
-.listitem:hover {
-  transform: scale(1.03);
-}
+  &:hover {
+    transform: scale(1.03);
+  }
 
-.card-info {
-  color: var(--dark-color);
-  text-align: center;
-}
+  .card-image {
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 230px;
+    width: 100%;
+  }
+  .card-info {
+    color: $white-color;
+    text-align: center;
 
-.card-info-name {
-  font-size: 1rem;
-  padding: 5px;
-}
+    .card-info-name {
+      font-size: 1rem;
+      padding: 5px;
+    }
 
-.card-info-rating {
-  color: var(--primary-color);
-  padding: 5px;
+    .card-info-rating {
+      color: var(--primary-color);
+      padding: 5px;
+    }
+  }
 }

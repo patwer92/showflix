@@ -12,6 +12,15 @@ const Details = ({ match }) => {
     getDetails(match.params.id);
   }, []);
 
+  const removeTags = (text) => {
+    if (text === null || text === "") {
+      return false;
+    } else {
+      text = text.toString();
+    }
+    return text.replace(/(<([^>]+)>)/gi, "");
+  };
+
   return (
     <>
       <Container>

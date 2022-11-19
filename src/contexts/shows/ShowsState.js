@@ -14,7 +14,7 @@ import {
 const ShowsState = (props) => {
   const initialState = {
     shows: [],
-    singleShow: {},
+    showDetails: {},
     loading: false,
   };
 
@@ -29,9 +29,27 @@ const ShowsState = (props) => {
 
     console.log(data);
 
+    setTimeout(() => dispatch({ type: SEARCH_SHOWS, payload: data }), 250);
+  };
+
+  const getDetails = async (id) => {
     dispatch({
-      type: SEARCH_SHOWS,
+      type: SET_LOADING,
+    });
+
+    const { data } = await axios.get(`http://api.tvmaze.com/shows/${id}`);
+
+    console.log(data);
+
+    dispatch({
+      type: SET_DETAILS,
       payload: data,
+    });
+  };
+
+  const clearDetails = () => {
+    dispatch({
+      type: CLEAR_DETAILS,
     });
   };
 
@@ -42,6 +60,8 @@ const ShowsState = (props) => {
         showDetails: state.showDetails,
         loading: state.loading,
         searchShows,
+        getDetails,
+        clearDetails,
       }}
     >
       {props.children}

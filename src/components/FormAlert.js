@@ -1,6 +1,6 @@
 import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 
-const FormError = ({ type, message }) => {
+const FormAlert = ({ type, message }) => {
   return (
     <div className={`error error-${type}`}>
       <ExclamationCircleIcon className="error-icon" />
@@ -9,4 +9,4 @@ const FormError = ({ type, message }) => {
   );
 };
 
-export default FormError;
+export default FormAlert;
