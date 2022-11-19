@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const CardItem = ({ id, image, name, rating }) => {
+const ListItem = ({ image, name, rating, id }) => {
   return (
-    <Link to={`/details/${id}`} className="card">
-      <img className="card-image" src={image} alt={name} />
+    <Link to={`/singleshow/${id}`} className="card">
+      <img class="card-image" src={image} alt={name} />
       <div className="card-info">
         <h4 className="card-info-name">{name}</h4>
         <h4 className="card-info-rating">{rating}</h4>
@@ -12,4 +12,4 @@ const CardItem = ({ id, image, name, rating }) => {
   );
 };
 
-export default CardItem;
+export default ListItem;

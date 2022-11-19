@@ -1,8 +1,8 @@
 import {
   SEARCH_SHOWS,
   SET_LOADING,
-  SET_DETAILS,
-  CLEAR_DETAILS,
+  SET_SINGLE_SHOW,
+  CLEAR_SINGLE_SHOW,
 } from "../types";
 
 const showsReducer = (state, action) => {
@@ -18,16 +18,16 @@ const showsReducer = (state, action) => {
         shows: action.payload,
         loading: false,
       };
-    case SET_DETAILS:
+    case SET_SINGLE_SHOW:
       return {
         ...state,
-        showDetails: action.payload,
+        singleShow: action.payload,
         loading: false,
       };
-    case CLEAR_DETAILS:
+    case CLEAR_SINGLE_SHOW:
       return {
         ...state,
-        showDetails: {},
+        singleShow: {},
       };
     default:
       return state;

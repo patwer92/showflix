@@ -1,20 +1,18 @@
 import { useReducer } from "react";
 import axios from "axios";
-
 import ShowsContext from "./showsContext";
 import ShowsReducer from "./showsReducer";
-
 import {
   SEARCH_SHOWS,
   SET_LOADING,
-  SET_DETAILS,
-  CLEAR_DETAILS,
+  SET_SINGLE_SHOW,
+  CLEAR_SINGLE_SHOW,
 } from "../types";
 
 const ShowsState = (props) => {
   const initialState = {
     shows: [],
-    showDetails: {},
+    singleShow: {},
     loading: false,
   };
 
@@ -24,32 +22,35 @@ const ShowsState = (props) => {
     dispatch({ type: SET_LOADING });
 
     const { data } = await axios.get(
-      `http://api.tvmaze.com/search/shows?q=${searchTerm}`
+      `https://api.tvmaze.com/search/shows?q=${searchTerm}`
     );
 
     console.log(data);
 
-    setTimeout(() => dispatch({ type: SEARCH_SHOWS, payload: data }), 250);
-  };
-
-  const getDetails = async (id) => {
     dispatch({
-      type: SET_LOADING,
-    });
-
-    const { data } = await axios.get(`http://api.tvmaze.com/shows/${id}`);
-
-    console.log(data);
-
-    dispatch({
-      type: SET_DETAILS,
+      type: SEARCH_SHOWS,
       payload: data,
     });
   };
 
-  const clearDetails = () => {
+  const getSingleShow = async (id) => {
     dispatch({
-      type: CLEAR_DETAILS,
+      type: SET_LOADING,
+    });
+
+    const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`);
+
+    console.log(data);
+
+    dispatch({
+      type: SET_SINGLE_SHOW,
+      payload: data,
+    });
+  };
+
+  const clearSingleShow = () => {
+    dispatch({
+      type: CLEAR_SINGLE_SHOW,
     });
   };
 
@@ -57,11 +58,11 @@ const ShowsState = (props) => {
     <ShowsContext.Provider
       value={{
         shows: state.shows,
-        showDetails: state.showDetails,
+        singleShow: state.singleShow,
         loading: state.loading,
         searchShows,
-        getDetails,
-        clearDetails,
+        getSingleShow,
+        clearSingleShow,
       }}
     >
       {props.children}
