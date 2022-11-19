@@ -1,21 +1,26 @@
-.singleshow {
+.singlepage {
   display: flex;
   margin: 2rem 0;
-}
 
-.singleshow > img {
-  margin-right: 2rem;
-}
+  img {
+    min-width: 300px;
+    margin-right: 2rem;
+    object-fit: cover;
+  }
 
-.singleshow__info p {
-  margin: 1rem 0;
-}
+  .singlepage-info {
+    .singlepage-genre {
+      display: inline-block;
+      border-radius: 15px;
+      margin: 0.5rem 1rem 0.5rem 0;
+      padding: 10px 17px;
+      background: lightblue;
+      color: $accent-color;
+    }
+  }
 
-.singleshow__genre {
-  display: inline-block;
-  border-radius: 15px;
-  margin: 0.5rem 1rem 0.5rem 0;
-  padding: 10px 17px;
-  background: var(--primary-color);
-  color: var(--white-color);
+  .singlepage-info,
+  p {
+    margin: 1rem 0;
+  }
 }

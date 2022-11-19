@@ -1,10 +1,14 @@
 .search {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  position: fixed;
+  left: 5.9%;
+  z-index: 999;
   .search-form {
     width: 100%;
     max-width: 350px;
-    background: rgba(255, 255, 255, 0.2);
-    // background: rgb(68, 68, 68);
+
+    background: rgba($color: #0d0a16, $alpha: 0.6);
+    background: #0d0a14;
     display: flex;
     align-items: center;
     border-radius: 60px;
@@ -16,11 +20,11 @@
       border: 0;
       outline: none;
       padding: 14px 10px;
-      font-size: 20px;
-      color: $grey-color;
+      font-size: $sm-font;
+      color: white;
 
       &:focus {
-        color: $white-color;
+        color: white;
       }
     }
 
@@ -31,7 +35,7 @@
         transition: $primary-transition;
 
         &:hover {
-          color: $white-color;
+          color: white;
         }
       }
     }

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 // Components
 import Header from "./components/Header";
@@ -12,13 +13,13 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <div className="container">
+      <Container fluid>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route path="/singleshow/:id" component={SinglePage} />
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 };

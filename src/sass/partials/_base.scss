@@ -7,18 +7,18 @@
 body {
   font-family: $primary-font;
   min-height: 110vh;
-  background: $black-color;
-  color: $white-color;
+  background: $dark-color;
 }
 
-.container {
+.container-fluid {
+  width: 90%;
   margin: auto;
 }
 
 a {
   text-decoration: none;
   list-style: none;
-  color: $white-color;
+  color: $accent-color;
 }
 
 /* SCROLLBAR */

@@ -15,8 +15,8 @@ const Header = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Navbar>
-        <Container>
+      <Navbar sticky="top">
+        <Container fluid>
           <Link to="/" className="logo-container">
             <Logo className="logo" />
             <Navbar.Brand className="nav-brand">SHOWFLIX</Navbar.Brand>
@@ -35,14 +35,13 @@ const Header = () => {
               <div className="about-info">
                 <p>Tv Show Search App (v1.0)</p>
                 <div>
-                  <p>This app was built with:</p>
+                  <p>Built with:</p>
                   <ul>
                     <li>React (create-react-app)</li>
                     <li>SCSS & HTML</li>
                     <li>Axios AJAX Request</li>
                     <li>React Router</li>
                     <li>React Context API</li>
-                    <li>Deploying to Netlify</li>
                   </ul>
                 </div>
               </div>

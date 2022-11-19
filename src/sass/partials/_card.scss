@@ -1,37 +1,166 @@
-.card {
-  display: inline-block;
-  margin: 1rem auto;
-  width: 210px;
-  background: var(--white-color);
-  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
-    0 3px 1px 0 rgba(20, 23, 28, 0.1);
-  cursor: pointer;
-  text-decoration: none;
+// .card {
+//   display: inline-block;
+//   margin: 1rem auto;
+//   width: 210px;
+//   background: $accent-color;
+//   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+//     0 3px 1px 0 rgba(20, 23, 28, 0.1);
+//   cursor: pointer;
+//   text-decoration: none;
+//
+
+//   .card-image {
+//     object-fit: cover;
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     height: 230px;
+//     width: 100%;
+//   }
+//   .card-info {
+//     color: $accent-color;
+//     text-align: center;
+
+//     .card-info-name {
+//       font-size: 1rem;
+//       padding: 5px;
+//     }
+
+//     .card-info-rating {
+//       padding: 5px;
+//     }
+//   }
+// }
+
+.card-container {
+  width: 380px;
+  height: 580px;
+  background-color: #1e1b26;
+  margin: 60px auto 0 auto;
+  box-shadow: 5px 5px 115px -14px black;
+  border-radius: 4px;
   transition: $secondary-transition;
 
   &:hover {
     transform: scale(1.03);
   }
+}
 
-  .card-image {
-    object-fit: cover;
+.card {
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 38%,
+    rgba(255, 255, 255, 0.06) 39%,
+    rgba(30, 27, 38, 0.88) 53%,
+    rgba(30, 27, 38, 1) 55%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 38%,
+    rgba(255, 255, 255, 0.06) 39%,
+    rgba(30, 27, 38, 0.88) 53%,
+    rgba(30, 27, 38, 1) 55%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 38%,
+    rgba(255, 255, 255, 0.06) 39%,
+    rgba(30, 27, 38, 0.88) 53%,
+    rgba(30, 27, 38, 1) 55%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1e1b26',GradientType=0 ); /* IE6-9 */
+
+  position: absolute;
+  background-size: contain;
+  background-size: cover;
+  z-index: 1 !important;
+  width: 380px;
+  height: 580px;
+  display: block;
+  border-radius: 4px;
+}
+
+.card-image {
+  width: 100%;
+  height: 380px;
+  object-position: center;
+  object-fit: cover;
+  z-index: 111 !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  mask-image: gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(0, 0, 0, 1)),
+    color-stop(0.35, rgba(0, 0, 0, 1)),
+    color-stop(0.5, rgba(0, 0, 0, 1)),
+    color-stop(0.65, rgba(0, 0, 0, 1)),
+    color-stop(0.85, rgba(0, 0, 0, 0.6)),
+    color-stop(1, rgba(0, 0, 0, 0))
+  );
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(0, 0, 0, 1)),
+    color-stop(0.35, rgba(0, 0, 0, 1)),
+    color-stop(0.5, rgba(0, 0, 0, 1)),
+    color-stop(0.65, rgba(0, 0, 0, 1)),
+    color-stop(0.85, rgba(0, 0, 0, 0.6)),
+    color-stop(1, rgba(0, 0, 0, 0))
+  );
+
+  position: relative;
+}
+
+.card-text-container {
+  height: 200px;
+  padding: 0px 12px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: $primary-font;
+  font-size: $xl-font;
+  font-weight: $regular;
+  color: $accent-color;
+  margin: 0px;
+}
+
+.card-list {
+  margin: 15px 0px;
+  padding: 0px;
+  li {
+    font-family: $primary-font;
+    font-size: $xs-font;
+    color: darken($accent-color, 40%);
+    width: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 230px;
-    width: 100%;
+    float: left;
+    margin-right: 6px;
+    font-weight: $semi-bold;
   }
-  .card-info {
-    color: $white-color;
-    text-align: center;
+}
 
-    .card-info-name {
-      font-size: 1rem;
-      padding: 5px;
-    }
+.card-summary {
+  font-family: $primary-font;
+  font-size: $xxs-font;
+  font-weight: $regular;
+  color: darken($accent-color, 30%);
+  text-align: justify;
+  line-height: 1.3;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .card-info-rating {
-      padding: 5px;
-    }
+  span {
+    font-weight: bolder;
+    padding: 0 0px 0 5px;
   }
 }

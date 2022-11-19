@@ -1,22 +1,33 @@
 // COLORS
-$primary-color: #e50914;
-$secondary-color: #56df9a;
+$primary-color: #41416e;
+$secondary-color: #0d0a16;
+$accent-color: #e7e7e7;
+$dark-color: #1e1b26;
 
 $lightgrey-color: #ced4da;
 $grey-color: #a3abbd;
 $darkgrey-color: #7b8291;
-
-$white-color: #fcfcfc;
 $black-color: #212529;
 
 // FONTS
 $primary-font: "Noto Sans Hebrew", sans-serif;
 $secondary-font: "Bangers", cursive;
+$heading-font: "Montserrat", sans-serif;
 
 // FONT-SIZE
+$xxl-font: 36px;
+$xl-font: 28px;
 $lg-font: 24px;
 $mid-font: 20px;
 $sm-font: 16px;
+$xs-font: 14px;
+$xxs-font: 12px;
+
+// FONT-WEIGHT
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
 
 // BREAKPOINTS
 $xl-breakpoint: 1600px;

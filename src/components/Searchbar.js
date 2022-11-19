@@ -28,7 +28,6 @@ const Searchbar = () => {
 
   return (
     <div className="search">
-      {alert ? <Alert message={alert.message} type={alert.type} /> : null}
       <form className="search-form">
         <input
           type="text"
@@ -40,6 +39,7 @@ const Searchbar = () => {
           <MagnifyingGlassIcon className="search-icon" />
         </button>
       </form>
+      {alert ? <Alert message={alert.message} type={alert.type} /> : null}
     </div>
   );
 };

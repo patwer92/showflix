@@ -1,7 +1,9 @@
+import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
+
 const Alert = ({ type, message }) => {
   return (
-    <div className={`alert alert-${type}`}>
-      <i className="fas fa-info-circle"></i> {message}
+    <div className={`error error-${type}`}>
+      <ExclamationCircleIcon className="error-icon" /> {message}
     </div>
   );
 };

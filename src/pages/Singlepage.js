@@ -27,7 +27,7 @@ const Singlepage = ({ match }) => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="singleshow">
+        <div className="singlepage">
           <img
             src={
               singleShow.image
@@ -36,11 +36,11 @@ const Singlepage = ({ match }) => {
             }
             alt={singleShow.name}
           />
-          <div className="singleshow__info">
+          <div className="singlepage-info">
             <h1>{singleShow.name}</h1>
             {singleShow.genres &&
               singleShow.genres.map((genre) => (
-                <span key={genre} className="singleshow__genre">
+                <span key={genre} className="singlepage-genre">
                   {genre}
                 </span>
               ))}
