@@ -24,28 +24,26 @@ const Header = () => {
 
           <Bars3Icon className="nav-btn" onClick={handleShow} />
         </Container>
-
-        <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>SHOWFLIX</Offcanvas.Title>
-          </Offcanvas.Header>
+        <Offcanvas show={show} onHide={handleClose} placement="end">
           <Offcanvas.Body>
             <div className="about">
-              <h3 className="about-title">ABOUT</h3>
-              <div className="about-info">
-                <p>Tv Show Search App (v1.0)</p>
-                <div>
-                  <p>Built with:</p>
-                  <ul>
-                    <li>React (create-react-app)</li>
-                    <li>SCSS & HTML</li>
-                    <li>Axios AJAX Request</li>
-                    <li>React Router</li>
-                    <li>React Context API</li>
-                  </ul>
-                </div>
+              <div className="about-title">
+                <h2>SHOWFLIX</h2>
+                <h4>Tv Show Search App (v1.0)</h4>
               </div>
-              <p>Made with ❤️ by Patrick Werner</p>
+              <div className="about-info">
+                <p>Built with:</p>
+                <ul>
+                  <li>React</li>
+                  <li>SASS & HTML</li>
+                  <li>Axios AJAX Request</li>
+                  <li>React Router</li>
+                  <li>React Context API</li>
+                </ul>
+              </div>
+              <div className="about-footer">
+                <p>Made by Patrick Werner</p>
+              </div>
             </div>
           </Offcanvas.Body>
         </Offcanvas>

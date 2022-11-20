@@ -34,6 +34,8 @@ const Homepage = () => {
                   ? item.show.rating.average
                   : "No rating"
               }
+              language={item.show.language}
+              genres={item.show.genres}
             />
           ))}
         </div>

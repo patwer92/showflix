@@ -1,0 +1,26 @@
+.about,
+.about-title,
+.about-info,
+.about-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about {
+  height: 100%;
+
+  justify-content: space-between;
+
+  .about-title {
+    margin-top: 4rem;
+  }
+
+  .about-info {
+    p {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+      border-bottom: 1px solid white;
+    }
+  }
+}

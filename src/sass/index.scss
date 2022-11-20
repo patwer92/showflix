@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+Hebrew:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 @import "~bootstrap/scss/bootstrap";
 @import "partials/variables";
 @import "partials/base";
 @import "partials/header";
 @import "partials/homepage";
-// @import "partials/aboutpage";
+@import "partials/about";
 @import "partials/singlepage";
 @import "partials/search";
 @import "partials/card";

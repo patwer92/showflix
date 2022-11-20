@@ -1,8 +1,5 @@
 .search {
   margin-top: 1rem;
-  position: fixed;
-  left: 5.9%;
-  z-index: 999;
   .search-form {
     width: 100%;
     max-width: 350px;
@@ -58,7 +55,7 @@
     color: #ffee00;
   }
   .error-danger {
-    color: #ff0000;
+    color: #f81d1d;
   }
   .error-info {
     color: #fff;

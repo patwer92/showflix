@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ListItem = ({ image, name, rating, id }) => {
+const ListItem = ({ id, image, name, rating, language, runtime, genres }) => {
   return (
     <Link to={`/singleshow/${id}`} className="card-container">
       <div className="card">
@@ -9,16 +9,18 @@ const ListItem = ({ image, name, rating, id }) => {
           <div className="card-title">
             <h2>{name}</h2>
             <ul className="card-list">
-              <li>CBS /</li>
-              <li>60min /</li>
-              <li>Adventure, Drama, Sci-Fi</li>
+              <li>
+                {genres &&
+                  genres.map((genre) => <span key={genre}>{genre}</span>)}
+              </li>
             </ul>
           </div>
-
           <div className="card-summary">
-            <p>United States</p>
             <p>
               Rating:<span>{rating}</span>
+            </p>
+            <p>
+              Language:<span>{language}</span>
             </p>
           </div>
         </div>

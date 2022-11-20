@@ -1,12 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
   font-family: $primary-font;
-  min-height: 110vh;
+  min-height: auto;
   background: $dark-color;
 }
 

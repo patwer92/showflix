@@ -6,7 +6,6 @@ import Header from "./components/Header";
 
 // Pages
 import HomePage from "./pages/Homepage";
-import AboutPage from "./pages/Aboutpage";
 import SinglePage from "./pages/Singlepage";
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
       <Container fluid>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/about" component={AboutPage} />
           <Route path="/singleshow/:id" component={SinglePage} />
         </Switch>
       </Container>
