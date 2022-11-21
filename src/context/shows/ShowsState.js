@@ -27,10 +27,12 @@ const ShowsState = (props) => {
 
     console.log(data);
 
-    dispatch({
-      type: SEARCH_SHOWS,
-      payload: data,
-    });
+    setTimeout(() => {
+      dispatch({
+        type: SEARCH_SHOWS,
+        payload: data,
+      });
+    }, 2000);
   };
 
   const getSingleShow = async (id) => {
@@ -42,10 +44,12 @@ const ShowsState = (props) => {
 
     console.log(data);
 
-    dispatch({
-      type: SET_SINGLE_SHOW,
-      payload: data,
-    });
+    setTimeout(() => {
+      dispatch({
+        type: SET_SINGLE_SHOW,
+        payload: data,
+      });
+    }, 1000);
   };
 
   const clearSingleShow = () => {

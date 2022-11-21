@@ -1,0 +1,60 @@
+// Variables
+$circleDiam: 300px;
+$innerCircleDiam: $circleDiam/3;
+$rotatingCircleDiam: $circleDiam/5;
+
+$innerCirclePos: ($circleDiam - $innerCircleDiam)/2;
+$rotatingCirclePosLeft: ($circleDiam - $innerCircleDiam)/2 - $rotatingCircleDiam;
+$rotatingCirclePosTop: $circleDiam/2 - $rotatingCircleDiam/2;
+
+.loading-text {
+  color: $darkgrey-color;
+  font-size: $xxs-font;
+  padding-top: 125px;
+  padding-left: 125px;
+}
+
+.spinner {
+  text-indent: 999em;
+  width: $circleDiam;
+  height: $circleDiam;
+  margin: -$circleDiam/2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: $rotatingCirclePosTop;
+    left: $rotatingCirclePosLeft;
+    background: $dark-color;
+    height: $rotatingCircleDiam;
+    width: $rotatingCircleDiam;
+    animation: spin 1.4s linear infinite;
+    border-radius: 50%;
+    transform-origin: $innerCirclePos/2 + $rotatingCircleDiam;
+  }
+}
+
+// Spin it!
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+
+    box-shadow: 1px 5px 2px #18b201;
+    background: #e65c00;
+  }
+  50% {
+    transform: rotate(180deg);
+
+    box-shadow: 1px 5px 2px #e65c00;
+    background: #0456c8;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+    background: #18b201;
+  }
+}
