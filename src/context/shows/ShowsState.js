@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import axios from "axios";
+
 import ShowsContext from "./showsContext";
 import ShowsReducer from "./showsReducer";
 import {
@@ -25,8 +26,6 @@ const ShowsState = (props) => {
       `https://api.tvmaze.com/search/shows?q=${searchTerm}`
     );
 
-    console.log(data);
-
     setTimeout(() => {
       dispatch({
         type: SEARCH_SHOWS,
@@ -41,8 +40,6 @@ const ShowsState = (props) => {
     });
 
     const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`);
-
-    console.log(data);
 
     setTimeout(() => {
       dispatch({

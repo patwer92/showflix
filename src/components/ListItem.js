@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ListItem = ({ id, image, name, rating, language, runtime, genres }) => {
+const ListItem = ({ id, image, name, rating, language, genres }) => {
   return (
     <Link to={`/singleshow/${id}`} className="card-container">
       <div className="card">

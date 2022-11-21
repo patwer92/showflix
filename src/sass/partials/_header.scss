@@ -1,6 +1,6 @@
 .navbar {
   height: 8vh;
-  background: #0d0a16d5;
+  background: #0d0a16d8;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -30,18 +30,26 @@
       }
     }
   }
-  .nav-btn {
-    width: 2.5rem;
-    color: $grey-color;
-    transition: $primary-transition;
 
-    &:hover {
+  .about-link {
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: $mid-font;
+    color: $grey-color;
+
+    &:hover .about-btn {
       color: $accent-color;
       cursor: pointer;
     }
-
-    @media (max-width: $mid-breakpoint) {
+    .about-btn {
+      margin-left: 1rem;
       width: 2rem;
+      color: $grey-color;
+      transition: $primary-transition;
+
+      @media (max-width: $mid-breakpoint) {
+        width: 2rem;
+      }
     }
   }
 }
@@ -64,7 +72,4 @@
       }
     }
   }
-}
-button.close {
-  filter: brightness(0) invert(1) !important;
 }

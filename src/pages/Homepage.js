@@ -1,9 +1,6 @@
 import { useContext } from "react";
 
-// Context
 import ShowsContext from "../context/shows/showsContext";
-
-// Components
 import Searchbar from "../components/Searchbar";
 import ListItem from "../components/ListItem";
 import Loader from "../components/Loader";

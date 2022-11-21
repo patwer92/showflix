@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import { ReactComponent as Logo } from "../assets/eye-logo.svg";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -21,8 +22,10 @@ const Header = () => {
             <Logo className="logo" />
             <Navbar.Brand className="nav-brand">SHOWFLIX</Navbar.Brand>
           </Link>
-
-          <Bars3Icon className="nav-btn" onClick={handleShow} />
+          <p className="about-link" onClick={handleShow}>
+            About
+            <QuestionMarkCircleIcon className="about-btn" />
+          </p>
         </Container>
         <Offcanvas show={show} onHide={handleClose} placement="end">
           <Offcanvas.Body>

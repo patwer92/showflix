@@ -2,16 +2,19 @@
 $circleDiam: 300px;
 $innerCircleDiam: $circleDiam/3;
 $rotatingCircleDiam: $circleDiam/5;
-
 $innerCirclePos: ($circleDiam - $innerCircleDiam)/2;
 $rotatingCirclePosLeft: ($circleDiam - $innerCircleDiam)/2 - $rotatingCircleDiam;
 $rotatingCirclePosTop: $circleDiam/2 - $rotatingCircleDiam/2;
 
 .loading-text {
-  color: $darkgrey-color;
-  font-size: $xxs-font;
-  padding-top: 125px;
-  padding-left: 125px;
+  font-family: $heading-font;
+  color: $accent-color;
+  font-size: $xs-font;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-top: 130px;
+  padding-left: 108px;
+  letter-spacing: 1px;
 }
 
 .spinner {
@@ -38,17 +41,14 @@ $rotatingCirclePosTop: $circleDiam/2 - $rotatingCircleDiam/2;
   }
 }
 
-// Spin it!
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-
     box-shadow: 1px 5px 2px #18b201;
     background: #e65c00;
   }
   50% {
     transform: rotate(180deg);
-
     box-shadow: 1px 5px 2px #e65c00;
     background: #0456c8;
   }

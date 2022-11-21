@@ -2,10 +2,7 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 
-// Context
 import ShowsContext from "../context/shows/showsContext";
-
-// Components
 import Loader from "../components/Loader";
 
 const Singlepage = ({ match }) => {
