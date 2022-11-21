@@ -21,6 +21,36 @@ a {
   color: $accent-color;
 }
 
+/* BUTTONS */
+.go-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  z-index: 999;
+  background: $dark-color;
+  border-radius: 50%;
+
+  @media (max-width: $mid-breakpoint) {
+    right: 0.5rem;
+  }
+
+  .to-top-btn {
+    padding: 0.2rem;
+    width: 2rem;
+    color: $grey-color;
+    border: 2px solid $grey-color;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transform: $secondary-transition;
+
+    &:hover {
+      color: $accent-color;
+      border: 2px solid $accent-color;
+    }
+  }
+}
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {

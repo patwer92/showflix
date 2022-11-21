@@ -4,6 +4,7 @@ import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 
 import ShowsContext from "../context/shows/showsContext";
 import Loader from "../components/Loader";
+import ScrollToTopBtn from "../utils/ScrollToTopBtn";
 
 const Singlepage = ({ match }) => {
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
@@ -27,10 +28,10 @@ const Singlepage = ({ match }) => {
         <Loader />
       ) : (
         <div className="details-container">
+          <ScrollToTopBtn />
           <Link to="/">
             <ChevronLeftIcon className="to-home-btn" />
           </Link>
-
           <div className="show-card">
             <img
               src={
@@ -163,7 +164,7 @@ const Singlepage = ({ match }) => {
               <div className="column1">
                 {singleShow.genres &&
                   singleShow.genres.map((genre) => (
-                    <span key={genre} className="singlepage-genre">
+                    <span key={genre} className="details-genre">
                       {genre}
                     </span>
                   ))}

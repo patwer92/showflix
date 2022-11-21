@@ -14,6 +14,10 @@
 
   .about-title {
     margin-top: 4rem;
+
+    h2 {
+      font-family: $heading-font;
+    }
   }
 
   .about-info {
@@ -21,6 +25,16 @@
       font-size: 1.4rem;
       margin: 1rem 0;
       border-bottom: 1px solid white;
+    }
+  }
+
+  .about-footer {
+    p {
+      font-weight: bolder;
+    }
+    span {
+      font-weight: initial;
+      font-style: italic;
     }
   }
 }

@@ -4,6 +4,7 @@ import ShowsContext from "../context/shows/showsContext";
 import Searchbar from "../components/Searchbar";
 import ListItem from "../components/ListItem";
 import Loader from "../components/Loader";
+import ScrollToTopBtn from "../utils/ScrollToTopBtn";
 
 const Homepage = () => {
   const showsContext = useContext(ShowsContext);
@@ -16,6 +17,7 @@ const Homepage = () => {
         <Loader />
       ) : (
         <div className="home-container">
+          <ScrollToTopBtn />
           {shows.map((item) => (
             <ListItem
               key={item.show.id}

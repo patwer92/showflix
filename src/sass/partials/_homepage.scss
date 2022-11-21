@@ -1,8 +1,18 @@
 .homepage {
-  margin-bottom: 60px;
+  margin-bottom: 120px;
+
   .home-container {
+    padding-top: 2rem;
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
+
+    h1 {
+      position: absolute;
+      color: $accent-color;
+      font-size: $xl-font;
+
+      font-family: $heading-font;
+    }
   }
 }

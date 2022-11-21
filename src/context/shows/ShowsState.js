@@ -31,7 +31,7 @@ const ShowsState = (props) => {
         type: SEARCH_SHOWS,
         payload: data,
       });
-    }, 2000);
+    }, 1000);
   };
 
   const getSingleShow = async (id) => {
@@ -46,7 +46,7 @@ const ShowsState = (props) => {
         type: SET_SINGLE_SHOW,
         payload: data,
       });
-    }, 1000);
+    }, 500);
   };
 
   const clearSingleShow = () => {

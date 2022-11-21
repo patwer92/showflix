@@ -32,24 +32,23 @@
   }
 
   .about-link {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
     cursor: pointer;
-    font-size: $mid-font;
+    font-size: $sm-font;
     color: $grey-color;
+    transition: $primary-transition;
 
+    &:hover,
     &:hover .about-btn {
       color: $accent-color;
       cursor: pointer;
     }
     .about-btn {
-      margin-left: 1rem;
-      width: 2rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.25rem;
+      width: 1.2rem;
       color: $grey-color;
       transition: $primary-transition;
-
-      @media (max-width: $mid-breakpoint) {
-        width: 2rem;
-      }
     }
   }
 }
